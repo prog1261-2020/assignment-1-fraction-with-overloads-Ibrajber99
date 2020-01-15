@@ -1,10 +1,42 @@
+
+/*
+* @file
+* @author  <Ibrahim Jaber>
+* @version 1.0
+*
+*
+* @section DESCRIPTION
+* < Fraction Oveloded operators>
+*
+*
+* @section LICENSE
+* <any necessary attributions>
+*
+* Copyright 2019 <Brandon Houston>
+* Permission to use, copy, modify, and/or distribute this software for
+* any purpose with or without fee is hereby granted, provided that the
+* above copyright notice and this permission notice appear in all copies.
+*
+* THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+* WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+* MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+* ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+* OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+*
+* @section Academic Integrity
+*  I certify that this work is solely my own and complies with
+*  NBCC Academic Integrity Policy (policy 1111)
+*/
+// Vector2D.cpp : Defines the functions for the static library.
+//
 #include "pch.h"
 #include "Fraction.h"
 #include <algorithm>
 #include <numeric>
-Fraction::Fraction():_numerator(1), _denomenator(1)
+Fraction::Fraction() :_numerator(1), _denomenator(1)
 {
-	
+
 	//Default constructor for stream insertion operator
 }
 
@@ -148,10 +180,10 @@ std::ostream& operator<<(std::ostream& os, const Fraction& fra)//overloaded Outp
 	return os;
 }
 
-std::istream& operator>>(std::istream& is,  Fraction& fra)//overloaded Input stream istream that inserts a sequnce of characters accordingly with denomenator and numerator of the fraction
+std::istream& operator>>(std::istream& is, Fraction& fra)//overloaded Input stream istream that inserts a sequnce of characters accordingly with denomenator and numerator of the fraction
 {
 	char D;
-	is >>  fra._numerator >>D>> fra._denomenator;
+	is >> fra._numerator >> D >> fra._denomenator;
 	return is;
 }
 
